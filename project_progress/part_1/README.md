@@ -1,7 +1,6 @@
 # Part 1 — Text Processing and Exploratory Data Analysis
 
 **Group:** Xavier Gutiérrez (u233714), Pau Martínez (u232318), Mikel Areta (u232868)  
-**Repository:** https://github.com/XaviGuti25/irwa-search-engine-2026 — tag `IRWA-2026-part-1`
 
 ## Content
 
