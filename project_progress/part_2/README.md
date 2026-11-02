@@ -18,7 +18,6 @@
    jupyter notebook part2.ipynb
    ```
    It reads `../../data/fashion_products_dataset.json`, `../../data/validation_labels.csv` and `my_labels.csv`. A full run takes about 1 minute.
-   The cell in 2.3 writes `to_judge.csv` (the top 20 results to label); it is only needed to redo the judgments.
 
 ## Notebook structure
 
