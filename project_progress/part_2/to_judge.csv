@@ -1,0 +1,101 @@
+query_id,query,rank,pid,score,title,details
+3,women hooded jacket,1,JCKFVEVFZ6BGWHFZ,0.6129,Full Sleeve Solid Women Sports Jacket,Dark Blue Polyester Solid Women Full Sleeve Blue Zipper Yes Sports Jacket Hooded Neck
+3,women hooded jacket,2,JCKFUFGZZSPGSYSS,0.5916,Full Sleeve Solid Women Casual Jacket,Grey Polyester Solid Women Full Sleeve Zipper Yes Casual Jacket Regular Hooded Neck 3 Months
+3,women hooded jacket,3,JCKFRAJTUACHZVHP,0.5751,Full Sleeve Solid Women Casual Jacket,Black Cotton Blend Solid Women Full Sleeve Zipper Yes Casual Jacket Regular Hooded Neck Side Pockets 3 Months
+3,women hooded jacket,4,JCKFPRBPRGG6BCSA,0.571,Full Sleeve Solid Women Casual Jacket,White Cotton Blend Solid Women Full Sleeve Zipper Yes Casual Jacket Regular Hooded Neck Side Pockets 3 Months
+3,women hooded jacket,5,JCKFRAJTVVHJJGGW,0.569,Full Sleeve Solid Women Casual Jacket,Grey Cotton Blend Solid Women Full Sleeve Zipper Yes Casual Jacket Regular Hooded Neck Side Pockets 3 Months
+3,women hooded jacket,6,JCKFW8EDXGMHU28V,0.5648,Full Sleeve Solid Women Casual Jacket,Black Polyester Solid Women Full Sleeve Zipper Yes Casual Jacket Regular Hooded Neck Side Pockets 3 Months
+3,women hooded jacket,7,JCKFUFGMC8Z5FJFY,0.5432,Full Sleeve Solid Women Sports Jacket,Dark Blue Polyester Blend Solid Women Full Sleeve Zipper Yes Sports Jacket Regular Hooded Neck 3 Months
+3,women hooded jacket,8,SWSE8FYZA7YUHA7C,0.4901,Full Sleeve Solid Women Sweatshirt,Black Cotton Blend Solid Hooded Neck Full Sleeve Casual Kangaroo Pockets at Front Yes
+3,women hooded jacket,9,SWSE8FYZKKYZSHH7,0.4864,Full Sleeve Solid Women Sweatshirt,Grey Cotton Blend Solid Hooded Neck Full Sleeve Casual Kangaroo Pockets At Front Yes
+3,women hooded jacket,10,SWSE8FYZQCRNM2KY,0.4864,Full Sleeve Solid Women Sweatshirt,Grey Cotton Blend Solid Hooded Neck Full Sleeve Casual Kangaroo Pockets At Front Yes
+3,women hooded jacket,11,SWSE8FYZ9GVGJCHF,0.4774,Full Sleeve Solid Women Sweatshirt,Maroon Cotton Blend Solid Hooded Neck Full Sleeve Casual Kangaroo Pockets at Front Yes
+3,women hooded jacket,12,JCKFWYNCWEHNZCTJ,0.4381,Full Sleeve Striped Women Casual Jacket,Blue Nylon Striped Women Full Sleeve Zipper Yes Casual Jacket Hooded Neck 2
+3,women hooded jacket,13,JCKFU9APAQJBN23B,0.4273,Full Sleeve Solid Women Casual Jacket,Black Nylon Solid Women Full Sleeve Zipper Yes Casual Jacket Regulor Hooded Neck 2
+3,women hooded jacket,14,JCKFW7ERKBA4BHY3,0.4129,Full Sleeve Solid Women Casual Jacket,Black Fleece Solid Women Full Sleeve None Zipper Yes Casual Jacket REGULOR Hooded Neck 2
+3,women hooded jacket,15,JCKFVVHNFQYBYNGH,0.4107,Full Sleeve Striped Women Casual Jacket,Maroon Nylon Striped Women Full Sleeve Zipper Yes Casual Jacket Regulor Hooded Neck 2
+3,women hooded jacket,16,JCKFVVHNRGWDGNQG,0.4093,Full Sleeve Striped Women Casual Jacket,Light Blue Nylon Striped Women Full Sleeve Zipper Yes Casual Jacket Regulor Hooded Neck 2
+3,women hooded jacket,17,JCKFQGP9SNRSZAKZ,0.407,Full Sleeve Colorblock Women Sports Jacket,"Red, White Polyester Colorblock Women Full Sleeve Blue Zipper Yes Sports Jacket Hooded Neck 2 Pockets at Front"
+3,women hooded jacket,18,JCKF4VYSWYKEVXZW,0.3859,Sleeveless Solid Women Casual Jacket,Blue Polycotton Solid Women Sleeveless Zipper Casual Jacket
+3,women hooded jacket,19,JCKFWYTHH3B5GKWS,0.3798,Full Sleeve Colorblock Women Casual Jacket,Beige Nylon Colorblock Women Full Sleeve Zipper Yes Casual Jacket Regulor Hooded Neck 2
+3,women hooded jacket,20,JCKFVEVFWGB2VAAY,0.3652,Full Sleeve Solid Women Sports Jacket,Black Polyester Solid Women Full Sleeve Black Zipper Yes Sports Jacket
+4,men running shoes,1,SHOEP5GUQYYFKYSN,0.6615,Running Shoes For Women  (White),White PU Women Sports No Shoe
+4,men running shoes,2,SHOESS9ZEZ6TEQUJ,0.6493,Running Shoes For Men  (Multicolor),Multicolor Mesh Men Sports No Shoe
+4,men running shoes,3,SHOESS9ZGMH7CURM,0.6493,Running Shoes For Men  (Multicolor),Multicolor Mesh Men Sports No Shoe
+4,men running shoes,4,SHOEKNRJGEYJCDQK,0.5076,"SPRINT Running Shoes For Men  (Blue, Grey)","Blue, Grey PVC, Mesh Men Sports No Shoe"
+4,men running shoes,5,SHOEKNRJ34UCMAPA,0.5059,"SPRINT Running Shoes For Men  (Black, Grey)","Black, Grey PVC, Mesh Men Sports No Shoe"
+4,men running shoes,6,SHOEWQKVSGFGXPQF,0.4906,Running Shoes For Men  (Blue),"Blue Mesh, PU Men Sports Lace-Ups Mesh Shoe"
+4,men running shoes,7,SHOFN3EJHXHGSGUC,0.4539,RS-7250 Running Shoes For Men  (Black),"Black Fabric Men Sports EVA Phylon, Rubber Lace-Ups Shoe"
+4,men running shoes,8,SHOEYF5UHUUH5ADZ,0.4536,"Running Shoes For Women  (Blue, Orange)","Blue, Orange Mesh Women Sports EVA Lace-Ups Printed Shoe"
+4,men running shoes,9,SHOFN3EJVGC9VXYT,0.4419,RS-7200 Running Shoes For Men  (Navy),Navy Fabric Men Sports EVA Phylon Lace-Ups Shoe
+4,men running shoes,10,SHOFN3EFNYGBKZT7,0.4376,"RS-7050 Running Shoes For Men  (Blue, Navy)","Blue, Navy Mesh Men Sports Phylon Rubber Lace-Ups Shoe"
+4,men running shoes,11,SHOFN3EJZVGC6GH8,0.4234,RS-7250 Running Shoes For Women  (Navy),"Navy Fabric Women Sports EVA Phylon, Rubber Lace-Ups Shoe"
+4,men running shoes,12,SHOFWFVWRSNK5AZJ,0.3585,Running Shoes For Women  (Multicolor),Multicolor Mesh Women Sports Fabric Lace-Ups 500 g (per single Shoe) - Weight of the product may vary depending on size. Care Instructions: Dust any dry dirt from the surface using a clean cloth. Do not use Polish or Shiner. Shoe
+4,men running shoes,13,SHOFTZFPNCU4VWHK,0.357,Running Shoes For Men  (Black),"Black Synthetic Men Sports Fabric Lace-Ups 500 g (per single Shoe) - Weight of the product may vary depending on size. Outer Material: Synthetic Leather, Inner Material: Cotton, Sole Material: TPR Shoe"
+4,men running shoes,14,SHOFTZFQP8W9G86F,0.3531,Running Shoes For Women  (Black),"Black Synthetic Women Sports Fabric Lace-Ups 500 g (per single Shoe) - Weight of the product may vary depending on size. Outer Material: Synthetic Leather, Inner Material: Cotton, Sole Material: TPR Shoe"
+4,men running shoes,15,SHOFTZFQQYKC8HY6,0.3512,Running Shoes For Men  (Yellow),"Yellow Synthetic Men Sports Fabric Lace-Ups 500 g (per single Shoe) - Weight of the product may vary depending on size. Outer Material: Synthetic Leather, Inner Material: Cotton, Sole Material: TPR Shoe"
+4,men running shoes,16,SHOFTZFQQKDWFYE6,0.3427,Running Shoes For Women  (Orange),"Orange Synthetic Women Sports Fabric Lace-Ups 500 g (per single Shoe) - Weight of the product may vary depending on size. Outer Material: Synthetic Leather, Inner Material: Cotton, Sole Material: TPR Shoe"
+4,men running shoes,17,SOCFVYHYZFJ4FFNG,0.3264,"Men Solid Low Cut, Peds/Footie/No-Show  (Pack of 6)","Multicolor Solid Men Cotton Blend Low Cut, Peds/Footie/No-Show Socks Pack of 6 Normal wash. Do not use brush. 6 Pair Sock"
+4,men running shoes,18,SHOFZP2FHH8Z6ZHC,0.3129,Running Shoes For Women  (Black),"Black Mesh Women Sports Fabric Lace-Ups 500 g (per single Shoe) - Weight of the product may vary depending on size. Care Instructions: Use shoe bags to prevent any stains, dust any dry dirt from the surface using a clean cloth. Shoe"
+4,men running shoes,19,SHOFKH9ZNNNWCHGC,0.3114,Running Shoes For Men  (Blue),"Blue Synthetic Men Sports Fabric Lace-Ups 500 g (per single Shoe) - Weight of the product may vary depending on size. Care Instructions: Use shoe bags to prevent any stains, dust any dry dirt from the surface using a clean cloth. Shoe"
+4,men running shoes,20,SHOFC585JH9RGXWG,0.2973,Cricket Shoes For Women  (White),White Synthetic Leather Women Sports Shoe
+5,women yellow kurta,1,KTAFZM3FPYWFMP7W,0.5803,Women Solid Cotton Blend Straight Kurta  (Yellow),Women Short Festive & Party Solid Straight Cotton Blend Mandarin/Chinese Neck Full Sleeve Yellow Pack of 1 1 Kurta
+5,women yellow kurta,2,KTAFZCZNGN8PZFHR,0.5367,Women Striped Cotton Blend Straight Kurta  (Yellow),Women Above Knee Festive & Party Striped Straight Cotton Blend Mandarin/Chinese Neck Full Sleeve Yellow Pack of 1 1 kurta Kurta
+5,women yellow kurta,3,KTAFZCZNKHTYHNCC,0.5367,Women Striped Cotton Blend Straight Kurta  (Yellow),Women Above Knee Festive & Party Striped Straight Cotton Blend Mandarin/Chinese Neck Full Sleeve Yellow Pack of 1 1 kurta Kurta
+5,women yellow kurta,4,KTAFH7NBG8PEX5GP,0.5303,"Women Solid Cotton Blend Straight Kurta  (Maroon, Yellow)","Women Short Festive & Party Solid Straight Cotton Blend Mandarin/Chinese Neck Full Sleeve Maroon, Yellow Pack of 2 Kurta"
+5,women yellow kurta,5,KTAFZPA5GRMYWAJ9,0.5191,Women Striped Cotton Blend Straight Kurta  (Yellow),Women Knee Length Festive & Party Striped Straight Cotton Blend Mandarin/Chinese Neck Full Sleeve Yellow Pack of 1 kurta Kurta
+5,women yellow kurta,6,KTAFX3FXKJYGGJY4,0.5024,Women Solid Pure Cotton Straight Kurta  (Yellow),Women Hip Length Casual Solid Straight Pure Cotton Mandarin/Chinese Neck Full Sleeve Yellow Pack of 1 1 Kurta
+5,women yellow kurta,7,ETHFPDUMFNYH3EUX,0.5003,Women Kurta and Pyjama Set Pure Cotton,Pure Cotton Kurta and Pyjama Set Solid Yellow
+5,women yellow kurta,8,ETHFY26AUAVTZYRD,0.4345,Women Kurta and Pyjama Set Pure Cotton,Pure Cotton Kurta and Pyjama Set Solid Yellow Ethnic Sets
+5,women yellow kurta,9,ETHFUJYMXPVMANNY,0.4303,Women Kurta and Pyjama Set Cotton Blend,Cotton Blend Kurta and Pyjama Set Cotton Cotton Self Design Yellow Ethnic Sets
+5,women yellow kurta,10,ETHFTTFEGXZFJ96Q,0.4264,Women Kurta and Pyjama Set Cotton Blend,Cotton Blend Kurta and Pyjama Set Solid Yellow Mandarin Collar Ethnic Sets
+5,women yellow kurta,11,ETHFYE22SZXXAZKY,0.4252,Women Kurta and Pyjama Set Pure Cotton,Pure Cotton Kurta and Pyjama Set White Cotton Cotton Kurta Pyjama Solid Yellow Mandarin Collar Ethnic Sets
+5,women yellow kurta,12,KTAFZFFPW5ZFEQQJ,0.4107,Women Striped Pure Cotton Straight Kurta  (Yellow),Women Knee Length Festive & Party Striped Straight Pure Cotton Mandarin/Chinese Neck Full Sleeve Yellow Pack of 1 kurta Kurta
+5,women yellow kurta,13,ETHFTW5WNW5YTYXS,0.399,Women Kurta and Pyjama Set Linen Blend,Linen Blend Kurta and Pyjama Set Cotton Solid Yellow Ethnic Sets
+5,women yellow kurta,14,ETHFTW5WTH64NWS6,0.399,Women Kurta and Pyjama Set Linen Blend,Linen Blend Kurta and Pyjama Set Cotton Solid Yellow Ethnic Sets
+5,women yellow kurta,15,KTAFZ8JEBG2NZBPA,0.3904,Women Solid Cotton Blend Straight Kurta  (Yellow),Women Short Casual Solid Straight Cotton Blend Mandarin/Chinese Neck Full Sleeve Yellow Pack of 1 1 Kurta
+5,women yellow kurta,16,KTAF8FJVVYE2EDWN,0.3903,Women Solid Cotton Blend Straight Kurta  (Yellow),"Women Short Casual Solid Straight Cotton Blend Mandarin/Chinese Neck Full Sleeve Yellow Pack of 1 kurta, 1 Kurta"
+5,women yellow kurta,17,KTAFDVG49KPUAJEN,0.3849,"Women Solid Cotton Blend Straight Kurta  (Black, Yellow)","Women Above Knee Casual Solid Straight Cotton Blend Mandarin/Chinese Neck Pockets on Sides Full Sleeve Black, Yellow Pack of 2 2 Kurta"
+5,women yellow kurta,18,KTAFDVG4HGJQMZQK,0.3849,"Women Solid Cotton Blend Straight Kurta  (Black, Yellow)","Women Above Knee Casual Solid Straight Cotton Blend Mandarin/Chinese Neck Pockets on Sides Full Sleeve Black, Yellow Pack of 2 2 Kurta"
+5,women yellow kurta,19,KTAFDVG4RGUFGNKU,0.3849,"Women Solid Cotton Blend Straight Kurta  (Black, Yellow)","Women Above Knee Casual Solid Straight Cotton Blend Mandarin/Chinese Neck Pockets on Sides Full Sleeve Black, Yellow Pack of 2 2 Kurta"
+5,women yellow kurta,20,KTAFDVG44YAGZKR3,0.3808,"Women Solid Cotton Blend Straight Kurta  (Green, Yellow)","Women Above Knee Casual Solid Straight Cotton Blend Mandarin/Chinese Neck Pockets on Sides Full Sleeve Green, Yellow Pack of 2 2 Kurta"
+6,men regular fit formal shirt,1,SHTFNYZFC3PCYWQU,0.7991,Men Regular Fit Solid Formal Shirt,Regular Cotton Blend Full Sleeve Solid White Shirt
+6,men regular fit formal shirt,2,SHTFNYZFJERTPUHG,0.7372,Men Regular Fit Solid Formal Shirt,Regular Cotton Blend Full Sleeve Solid Yellow Shirt
+6,men regular fit formal shirt,3,SHTFMBTYM2FKAKMN,0.6579,Men Regular Fit Solid Formal Shirt  (Pack of 2),Regular Cotton Blend Full Sleeve Solid Pink Shirt
+6,men regular fit formal shirt,4,SHTFP8JA2ZUG7EGN,0.5651,Men Regular Fit Solid Formal Shirt,Regular Cotton Blend Full Sleeve Solid Yellow Shirt
+6,men regular fit formal shirt,5,SHTFNZRGX3JZHRSM,0.5044,Men Regular Fit Solid Formal Shirt,Regular Cotton Blend Full Sleeve Solid Grey Shirt
+6,men regular fit formal shirt,6,SHTFTK76NMTN7HRP,0.5005,Men Regular Fit Solid Formal Shirt,Regular Cotton Blend Full Sleeve Solid Pink Shirt
+6,men regular fit formal shirt,7,SHTFNZRGXX77GXYH,0.4769,Men Regular Fit Solid Formal Shirt,Regular Cotton Blend Full Sleeve Solid Light Green Shirt
+6,men regular fit formal shirt,8,SHTFNZRG5J8MEX8J,0.473,Men Regular Fit Solid Formal Shirt,Regular Cotton Blend Full Sleeve Solid Orange Shirt
+6,men regular fit formal shirt,9,SHTFJF8MAJHHZHW6,0.4691,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Blue Straight
+6,men regular fit formal shirt,10,SHTFJF8MEUUNRTJK,0.4691,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Blue Straight
+6,men regular fit formal shirt,11,SHTFCA6HSYYBQXZV,0.4665,Men Regular Fit Striped Formal Shirt,Button Regular Polycotton Full Sleeve Striped Multicolor Shirt
+6,men regular fit formal shirt,12,SHTFJF8MKWHGJBBK,0.4624,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Green Straight
+6,men regular fit formal shirt,13,SHTFJF8MFZUUKT5G,0.4523,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Orange Straight
+6,men regular fit formal shirt,14,SHTFJF8MS6HY7QF8,0.4523,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Orange Straight
+6,men regular fit formal shirt,15,SHTFJF8MSGCENM2K,0.4523,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Orange Straight
+6,men regular fit formal shirt,16,SHTFJF8MKF9NUZYB,0.4516,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Pink Straight
+6,men regular fit formal shirt,17,SHTFJF8MPGWDMQDU,0.4516,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Pink Straight
+6,men regular fit formal shirt,18,SHTFJF8MWGXFUYJH,0.4516,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Pink Straight
+6,men regular fit formal shirt,19,SHTFJF8MWNKW36ZG,0.4516,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Pink Straight
+6,men regular fit formal shirt,20,SHTFJF8M37D2A6QR,0.4481,Men Regular Fit Self Design Spread Collar Formal Shirt,Regular Cotton Blend Short Sleeve Self Design Spread Purple Straight
+7,men sports shorts,1,SRTFZ3JZ8XKPZ79F,0.7219,Solid Men Black Sports Shorts,Polyester Solid Black Sports Shorts
+7,men sports shorts,2,SRTFDT7FJDZ5FNQT,0.701,Solid Men Black Sports Shorts,Polycotton Solid Black Sports Shorts
+7,men sports shorts,3,SRTF2NZY6AH7MMNM,0.6977,Solid Men Black Sports Shorts,Polycotton Solid Black Regular Sports Shorts
+7,men sports shorts,4,SRTFCYP9JZ9PFAGD,0.6713,Solid Men Blue Sports Shorts,Lycra Blend Solid Blue Sports Shorts
+7,men sports shorts,5,SRTFKCW2CQGGKWM8,0.6705,Solid Men Multicolor Sports Shorts,Polyester Solid Multicolor Sports Shorts
+7,men sports shorts,6,SRTFKGPG72XGJS3V,0.6538,"Solid Men Blue, Black Sports Shorts","Polyester Solid Blue, Black Sports Shorts"
+7,men sports shorts,7,SRTESY8JVQZYRGZG,0.6335,"Solid Men White, Black Sports Shorts","Polycotton Solid White, Black Regular Fit Sports Shorts"
+7,men sports shorts,8,SRTFKWP6PRBSECMN,0.6314,"Solid Men White, Blue Sports Shorts","Polyester Solid White, Blue Sports Shorts"
+7,men sports shorts,9,SRTFDZHCXBTCHPKF,0.6277,Solid Men Black Sports Shorts,Polycotton Solid Black Drawstring 2 Regular Sports Shorts
+7,men sports shorts,10,SRTFJ27PCYFA8PSW,0.6147,Solid Men Blue Sports Shorts,Acrylic Blend Solid Blue Sports Shorts
+7,men sports shorts,11,SRTESBUSZDKUSUGH,0.605,Solid Men Blue Sports Shorts,Polyester Solid Blue 1 Zipper Pocket at Front Regular Sports Shorts
+7,men sports shorts,12,SRTFUY46P753GZBT,0.5871,Solid Men Dark Blue Sports Shorts,Polyester Solid Dark Blue Sports Shorts
+7,men sports shorts,13,SRTFH92MHMFZCSJ5,0.5852,Striped Men Black Sports Shorts,Polyester Striped Black Sports Shorts
+7,men sports shorts,14,SRTFZ3JZTKGQ9KQK,0.5782,Solid Men Black Sports Shorts,Polyester Blend Solid Black Sports Shorts
+7,men sports shorts,15,SRTF7M8CEGVVH2ZR,0.5775,Self Design Men Blue Sports Shorts,Polycotton Self Design Blue Sports Shorts
+7,men sports shorts,16,SRTFUY48PXGJSTNV,0.5615,Printed Men Black Sports Shorts,"Polyester Printed Black Drawstring, Elasticated Sports Shorts"
+7,men sports shorts,17,SRTFZ3JZZ7CYH7ZP,0.5578,Solid Men Grey Sports Shorts,Polyester Blend Solid Grey Sports Shorts
+7,men sports shorts,18,SRTFMSE3SFHQDYE5,0.5459,Solid Men Black Sports Shorts,Polyester Solid Black Elasticated None Sports Shorts
+7,men sports shorts,19,DHYFHFUJMNHJCYYR,0.5406,Color Block Men Multicolor Sports Shorts,Cotton Blend Color Block Multicolor Regular Fit Sports Shorts
+7,men sports shorts,20,SRTFZ3JZMJ5FFCGM,0.5371,Solid Men Black Sports Shorts,Polyester Solid Black Sports Shorts
