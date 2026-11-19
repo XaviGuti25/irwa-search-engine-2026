@@ -13,6 +13,29 @@
 </table>
 
 ----
+## Our project
+
+**Group:** Xavier Gutiérrez (u233714), Pau Martínez (u232318), Mikel Areta (u232868)
+
+Each part of the project has its own folder in `project_progress/` with a notebook, a report and a README that explains its content and how to reproduce the results. Each submission is marked with a git tag.
+
+| Part | Topic | README | Tag |
+|---|---|---|---|
+| 1 | Text processing and exploratory data analysis | [project_progress/part_1/README.md](project_progress/part_1/README.md) | `IRWA-2026-part-1` |
+| 2 | Indexing and evaluation | [project_progress/part_2/README.md](project_progress/part_2/README.md) | `IRWA-2026-part-2` |
+| 3 | Ranking and filtering (TF-IDF, BM25, our score, word2vec) | [project_progress/part_3/README.md](project_progress/part_3/README.md) | `IRWA-2026-part-3` |
+
+Quick start for the notebooks (Windows: `irwa_venv\Scripts\activate`):
+
+```bash
+python -m venv irwa_venv
+source irwa_venv/bin/activate
+pip install -r requirements.txt
+```
+
+The rest of this README is the original template from the course.
+
+----
 ## Project Structure
 
 ```

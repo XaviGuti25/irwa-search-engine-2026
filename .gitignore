@@ -138,3 +138,6 @@ irwa_env/
 data/
 .env
 irwa_venv/
+
+# macOS
+.DS_Store
