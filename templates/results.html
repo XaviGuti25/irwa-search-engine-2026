@@ -1,27 +1,36 @@
 {% extends "base.html" %}
 {% block page_title %}{{ page_title }}{% endblock %}
 {% block content %}
-    Found <strong>{{ found_counter }}</strong> results...
-    <hr>
-    {% if rag_response %}
-        <div class="mb-4 p-3" style="border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
-            <h5>AI-Generated Summary:</h5>
-            <p>{{ rag_response }}</p>
-        </div>
+    <form method="POST" action="/search" class="d-flex mb-2">
+        <input class="form-control mr-2 search-pill" name="search-query" type="search" value="{{ query }}" required>
+        <button class="btn btn-primary btn-pill" type="submit">Search</button>
+    </form>
+    Found <strong>{{ found_counter }}</strong> results for "{{ query }}" (ranking: {{ method }}).
+    {% if match_mode == "or" and found_counter %}
+        <div class="text-muted small">No product contains all the words, so we show products that contain some of them.</div>
     {% endif %}
     <hr>
+    {% if rag_response %}
+        <h5>AI summary <small class="text-muted">({{ rag_mode }})</small></h5>
+        <div class="rag-box mb-3">{{ rag_response }}</div>
+    {% endif %}
     {% for item in results_list %}
-        <div class="pb-3">
-            <div class="doc-title">
-                <a href="{{ item.url }}">{{ item.title }}...
-                </a>
+        <div class="result">
+            {% if item.image %}<img src="{{ item.image.replace('/128/128/', '/416/416/') }}" alt="" loading="lazy" onerror="this.onerror=null; this.src='{{ item.image }}'">{% endif %}
+            <div>
+                <div class="doc-title"><span class="rank">{{ item.ranking }}</span><a href="{{ item.details_url }}">{{ item.title }}</a></div>
+                <div class="doc-meta">
+                    {% if item.brand %}<span class="text-muted mr-1">{{ item.brand }}</span>{% endif %}
+                    {% if item.selling_price %}<span class="price">Rs {{ item.selling_price|int }}</span>{% endif %}
+                    {% if item.actual_price and item.actual_price != item.selling_price %}<span class="old-price">Rs {{ item.actual_price|int }}</span>{% endif %}
+                    {% if item.discount %}<span class="discount">{{ item.discount|int }}% off</span>{% endif %}
+                    {% if item.average_rating %} <span class="rating">{{ item.average_rating }} ★</span>{% endif %}
+                    {% if item.out_of_stock %} <span class="out-of-stock">Out of stock</span>{% endif %}
+                </div>
+                <div class="doc-desc small">{{ (item.description or "")[:220] }}{% if item.description and item.description|length > 220 %}...{% endif %}</div>
+                <div class="small"><a href="{{ item.url }}" target="_blank">View on the original website</a>
+                    <span class="text-muted ml-2">score {{ item.score }}</span></div>
             </div>
-            <div class="doc-desc">
-                {{ item.doc_date }} — {{ item.description }}
-            </div>
-
         </div>
-
     {% endfor %}
 {% endblock %}
-

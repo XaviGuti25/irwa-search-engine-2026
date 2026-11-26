@@ -1,5 +1,5 @@
 import datetime
-from random import random
+import random
 
 from faker import Faker
 

@@ -80,29 +80,22 @@ class Document(BaseModel):
         return self.model_dump_json(indent=2)
 
 
-class StatsDocument(BaseModel):
-    """
-    Original corpus data as an object
-    """
-    pid: str
-    title: str
-    description: Optional[str] = None
-    url: Optional[str] = None
-    count: Optional[int] = None
-
-    def __str__(self) -> str:
-        return self.model_dump_json(indent=2)
-    
-    def to_json(self):
-        return self.model_dump_json()
-
-
 class ResultItem(BaseModel):
+    """One row of the results page."""
     pid: str
     title: str
     description: Optional[str] = None
-    url: Optional[str] = None
-    ranking: Optional[float] = None
+    brand: Optional[str] = None
+    selling_price: Optional[float] = None
+    actual_price: Optional[float] = None
+    discount: Optional[float] = None
+    average_rating: Optional[float] = None
+    out_of_stock: bool = False
+    url: Optional[str] = None           # original product page
+    image: Optional[str] = None
+    details_url: Optional[str] = None   # our document details page
+    ranking: Optional[int] = None       # position in the results
+    score: Optional[float] = None
 
     def __str__(self) -> str:
         return self.model_dump_json(indent=2)

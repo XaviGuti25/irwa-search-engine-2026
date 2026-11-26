@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block page_title %}{{ page_title }}{% endblock %}
+{% block container_class %}wide{% endblock %}
 
 {% block header %}
     <!-- Next tag loads Charts.js https://www.chartjs.org/docs/latest/ -->
@@ -9,23 +10,77 @@
 {% endblock %}
 
 {% block content %}
-
-    <!--
-    Examples of what to show in Dashboard:
-
-    - Ranking of visited documents (from results page)
-    - Visitor's preferred browsers
-    - Visitor's city (from IP)
-    - preferred queries ranking
-    - preferred terms
-    - etc.
-
-    -->
-
     <h3>Dashboard</h3>
-    <iframe src="/plot_number_of_views" width="600" height="400" style="border: none;"></iframe>
+    <p class="small text-muted">Usage data collected since the server started (stored in memory).
+        Raw tables: <a href="/analytics.json">/analytics.json</a></p>
 
+    <div class="row">
+        {% for label, value in data.kpis.items() %}
+            <div class="col-6 col-md-3"><div class="kpi"><div class="value">{{ value }}</div><div class="label">{{ label }}</div></div></div>
+        {% endfor %}
+    </div>
+    <p class="small text-muted">CTR = share of queries with at least one click. Dwell time = seconds spent on a
+        details page before going back. A session ends after 30 minutes without requests; a new mission starts when a
+        query shares no term with the previous one.</p>
 
+    <div class="row">
+        <div class="col-md-6 chart-box"><h5>Most frequent queries</h5><canvas id="queries"></canvas>
+            <p>What users search for most often.</p></div>
+        <div class="col-md-6 chart-box"><h5>Most frequent words</h5><canvas id="words"></canvas>
+            <p>Words used in the queries (without stop words). They show which products and attributes matter to users.</p></div>
+        <div class="col-md-6 chart-box"><h5>Terms per query</h5><canvas id="n_terms"></canvas>
+            <p>Length of the queries. Short queries are vague; long ones often need the OR fallback.</p></div>
+        <div class="col-md-6 chart-box"><h5>Rank of the clicked results</h5><canvas id="ranks"></canvas>
+            <p>Position of the clicked documents. Most clicks in the first positions means the ranking puts good results on top.</p></div>
+        <div class="col-md-6 chart-box"><h5>Requests per hour of the day</h5><canvas id="hours"></canvas>
+            <p>When the site is used.</p></div>
+        <div class="col-md-6 chart-box"><h5>Requests per page</h5><canvas id="paths"></canvas>
+            <p>How users move around the website.</p></div>
+        <div class="col-md-3 chart-box"><h5>Browsers</h5><canvas id="browsers"></canvas></div>
+        <div class="col-md-3 chart-box"><h5>Operating systems</h5><canvas id="os"></canvas></div>
+        <div class="col-md-3 chart-box"><h5>Devices</h5><canvas id="devices"></canvas></div>
+        <div class="col-md-3 chart-box"><h5>Ranking used</h5><canvas id="methods"></canvas></div>
+        <div class="col-12 chart-box"><p>Browser, OS and device are counted once per session. The last chart shows which ranking algorithm users choose.</p></div>
+    </div>
+
+    <h5>Most clicked documents</h5>
+    <table class="table table-sm small">
+        <tr><th>PID</th><th>Title</th><th>Clicks</th><th>Avg. dwell time (s)</th></tr>
+        {% for d in data.top_docs %}
+            <tr><td>{{ d.pid }}</td><td>{{ d.title }}</td><td>{{ d.clicks }}</td><td>{{ d.dwell }}</td></tr>
+        {% else %}<tr><td colspan="4">No clicks yet.</td></tr>{% endfor %}
+    </table>
+
+    <h5 class="mt-4">Last sessions and missions</h5>
+    <table class="table table-sm small">
+        <tr><th>Session</th><th>Visitor</th><th>Start</th><th>Browser / OS / device</th><th>Queries (mission)</th></tr>
+        {% for s in data.sessions %}
+            <tr><td>{{ s.session_id }}</td><td>{{ s.visitor_id }}</td><td>{{ s.start }}</td><td>{{ s.device }}</td>
+                <td>{% for mission, text in s.queries %}<span class="badge badge-light">M{{ mission }}</span> {{ text }}<br>{% endfor %}</td></tr>
+        {% endfor %}
+    </table>
+
+    <script>
+        const charts = {{ data.charts|tojson }};
+        const color = "#c8102e";
+        const palette = ["#c8102e", "#1f77b4", "#2ca02c", "#ff7f0e", "#9467bd", "#8c564b", "#7f7f7f"];
+        function bar(id, horizontal) {
+            new Chart(document.getElementById(id), {
+                type: "bar",
+                data: {labels: charts[id].labels, datasets: [{data: charts[id].values, backgroundColor: color}]},
+                options: {indexAxis: horizontal ? "y" : "x", plugins: {legend: {display: false}},
+                          scales: {[horizontal ? "x" : "y"]: {beginAtZero: true, ticks: {precision: 0}}}}
+            });
+        }
+        function doughnut(id) {
+            new Chart(document.getElementById(id), {
+                type: "doughnut",
+                data: {labels: charts[id].labels, datasets: [{data: charts[id].values, backgroundColor: palette}]},
+                options: {plugins: {legend: {position: "bottom"}}}
+            });
+        }
+        ["queries", "words", "paths"].forEach(id => bar(id, true));
+        ["n_terms", "ranks", "hours"].forEach(id => bar(id, false));
+        ["browsers", "os", "devices", "methods"].forEach(doughnut);
+    </script>
 {% endblock %}
-
-

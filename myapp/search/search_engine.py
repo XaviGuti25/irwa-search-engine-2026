@@ -1,36 +1,36 @@
-import random
-import numpy as np
+import time
 
-from myapp.search.objects import Document
+from myapp.search.algorithms import Index
+from myapp.search.objects import ResultItem
 
-
-def dummy_search(corpus: dict, search_id, num_results=20):
-    """
-    Just a demo method, that returns random <num_results> documents from the corpus
-    :param corpus: the documents corpus
-    :param search_id: the search id
-    :param num_results: number of documents to return
-    :return: a list of random documents from the corpus
-    """
-    res = []
-    doc_ids = list(corpus.keys())
-    docs_to_return = np.random.choice(doc_ids, size=num_results, replace=False)
-    for doc_id in docs_to_return:
-        doc = corpus[doc_id]
-        res.append(Document(pid=doc.pid, title=doc.title, description=doc.description,
-                            url="doc_details?pid={}&search_id={}&param2=2".format(doc.pid, search_id), ranking=random.random()))
-    return res
+METHODS = {"ours": "Our score", "bm25": "BM25", "tfidf": "TF-IDF + cosine"}
 
 
 class SearchEngine:
-    """Class that implements the search engine logic"""
+    """Search engine used by the web app. The index is built once, when the engine is created."""
 
-    def search(self, search_query, search_id, corpus):
-        print("Search query:", search_query)
+    def __init__(self, corpus):
+        start = time.time()
+        self.corpus = corpus
+        self.index = Index(corpus)
+        print(f"Index built in {time.time() - start:.1f}s ({len(self.index.index)} terms)")
 
+    def search(self, search_query, search_id, method="ours", top_k=20):
+        """
+        Run a query and return (results, total_found, mode).
+        results: list of ResultItem (top_k best), mode: 'and' or 'or' (OR is used only when AND finds nothing).
+        """
+        if method not in METHODS:
+            method = "ours"
+        ranked, mode = self.index.rank(search_query, method)
         results = []
-        ### You should implement your search logic here:
-        results = dummy_search(corpus, search_id)  # replace with call to search algorithm
-
-        # results = search_in_corpus(search_query)
-        return results
+        for position, (pid, score) in enumerate(ranked[:top_k], start=1):
+            d = self.corpus[pid]
+            results.append(ResultItem(
+                pid=pid, title=d.title, description=d.description, brand=d.brand,
+                selling_price=d.selling_price, actual_price=d.actual_price, discount=d.discount,
+                average_rating=d.average_rating, out_of_stock=d.out_of_stock, url=d.url,
+                image=d.images[0] if d.images else None,
+                details_url=f"/doc_details?pid={pid}&search_id={search_id}&rank={position}",
+                ranking=position, score=round(score, 4)))
+        return results, len(ranked), mode

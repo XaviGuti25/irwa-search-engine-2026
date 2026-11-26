@@ -4,15 +4,36 @@
     <div class="centered">
         <p>&nbsp;</p>
         <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <form class="d-flex" method="POST" onSubmit='return validate();' action="/search">
-            <input class="form-control me-2" name="search-query" type="search" placeholder="Search" aria-label="Search"
-                   autofocus="autofocus">
-            <button class="btn btn-primary" type="submit" onclick='this.form.submit();'>Search</button>
-            <input name="upf-irwa-hidden" type="hidden" value="123">
+        <form method="POST" action="/search" id="search-form">
+            <div class="d-flex">
+                <input class="form-control mr-2 search-pill" id="q" name="search-query" type="search" placeholder="Search products, e.g. men running shoes"
+                       aria-label="Search" autofocus="autofocus" required>
+                <button class="btn btn-primary btn-pill" type="submit">Search</button>
+            </div>
+            <div class="d-flex justify-content-center mt-3 small">
+                <label class="mr-2 mt-1">Ranking:</label>
+                <select name="method" class="form-control form-control-sm w-auto mr-4">
+                    {% for key, name in methods.items() %}<option value="{{ key }}">{{ name }}</option>{% endfor %}
+                </select>
+                <label class="mr-2 mt-1">AI summary:</label>
+                <select name="rag_mode" class="form-control form-control-sm w-auto">
+                    <option value="improved">Improved</option>
+                    <option value="baseline">Baseline</option>
+                </select>
+            </div>
         </form>
-        <p>&nbsp;</p>
+        <div class="mt-3 small text-muted">Try:
+            {% for q in ["men running shoes", "women yellow kurta", "women hooded jacket", "men sports shorts"] %}
+                <button type="button" class="try" data-q="{{ q }}">{{ q }}</button>
+            {% endfor %}
+        </div>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
+    <script>
+        document.querySelectorAll(".try").forEach(b => b.addEventListener("click", () => {
+            document.getElementById("q").value = b.dataset.q;
+            document.getElementById("search-form").submit();
+        }));
+    </script>
 {% endblock %}

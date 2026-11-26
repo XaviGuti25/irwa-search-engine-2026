@@ -1,18 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document Detail - IRWA Search Engine</title>
-</head>
-<body>
-<div><a href="/" >Home</a></div>
-<div><a href="/stats" >Stats</a></div>
-<div><a href="/dashboard" >Dashboard</a></div>
-<h1>Document Detail Page</h1>
-<p>This is a placeholder for document details.</p>
-<p>Here you can display more information about the document.</p>
-<p>For example, you might show the full text of the document, metadata, or other relevant details.</p>
-<p>You can also include links to related documents or resources.</p>
-<p>Feel free to customize this page to fit the needs of your application.</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block page_title %}{{ page_title }}{% endblock %}
+{% block content %}
+    <a href="javascript:history.back()">&larr; Back to results</a>
+    <h3 class="mt-2">{{ doc.title }}</h3>
+    <div class="row">
+        <div class="col-md-5 mb-3">
+            {% if doc.images %}
+                <img id="main-img" class="main-img" src="{{ doc.images[0].replace('/128/128/', '/416/416/') }}" alt=""
+                     onerror="this.onerror=null; this.src='{{ doc.images[0] }}'">
+                <div>{% for img in doc.images %}<img src="{{ img }}" alt="" class="thumb {% if loop.first %}on{% endif %}">{% endfor %}</div>
+            {% endif %}
+        </div>
+        <div class="col-md-7">
+            <div class="doc-meta mb-2">
+                {% if doc.selling_price %}<span class="price">Rs {{ doc.selling_price|int }}</span>{% endif %}
+                {% if doc.actual_price and doc.actual_price != doc.selling_price %}<span class="old-price">Rs {{ doc.actual_price|int }}</span>{% endif %}
+                {% if doc.discount %}<span class="discount">{{ doc.discount|int }}% off</span>{% endif %}
+                {% if doc.average_rating %} <span class="rating">{{ doc.average_rating }} ★</span>{% endif %}
+                {% if doc.out_of_stock %} <span class="out-of-stock">Out of stock</span>{% else %} <span class="text-muted">In stock</span>{% endif %}
+            </div>
+            <p>{{ doc.description }}</p>
+            <table class="table table-sm small">
+                <tr><th>PID</th><td>{{ doc.pid }}</td></tr>
+                <tr><th>Brand</th><td>{{ doc.brand }}</td></tr>
+                <tr><th>Category</th><td>{{ doc.category }} / {{ doc.sub_category }}</td></tr>
+                <tr><th>Seller</th><td>{{ doc.seller }}</td></tr>
+                {% for key, value in (doc.product_details or {}).items() %}
+                    <tr><th>{{ key }}</th><td>{{ value }}</td></tr>
+                {% endfor %}
+            </table>
+            <a class="btn btn-primary btn-pill" href="{{ doc.url }}" target="_blank">View on the original website</a>
+        </div>
+    </div>
+
+    <script>
+        // gallery: clicking a small picture shows it in the big one
+        document.querySelectorAll(".thumb").forEach(t => t.addEventListener("click", () => {
+            const main = document.getElementById("main-img");
+            main.onerror = () => { main.onerror = null; main.src = t.src; };
+            main.src = t.src.replace("/128/128/", "/416/416/");
+            document.querySelectorAll(".thumb").forEach(x => x.classList.toggle("on", x === t));
+        }));
+        // dwell time: seconds on this page, sent when the user leaves it
+        const start = Date.now();
+        window.addEventListener("pagehide", () => {
+            const data = new URLSearchParams({click_id: "{{ click_id }}", seconds: (Date.now() - start) / 1000});
+            navigator.sendBeacon("/dwell", data);
+        });
+    </script>
+{% endblock %}

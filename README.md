@@ -24,6 +24,7 @@ Each part of the project has its own folder in `project_progress/` with a notebo
 | 1 | Text processing and exploratory data analysis | [project_progress/part_1/README.md](project_progress/part_1/README.md) | `IRWA-2026-part-1` |
 | 2 | Indexing and evaluation | [project_progress/part_2/README.md](project_progress/part_2/README.md) | `IRWA-2026-part-2` |
 | 3 | Ranking and filtering (TF-IDF, BM25, our score, word2vec) | [project_progress/part_3/README.md](project_progress/part_3/README.md) | `IRWA-2026-part-3` |
+| 4 | RAG, user interface and web analytics (Flask web app) | [project_progress/part_4/README.md](project_progress/part_4/README.md) | `IRWA-2026-part-4` |
 
 Quick start for the notebooks (Windows: `irwa_venv\Scripts\activate`):
 
@@ -32,6 +33,8 @@ python -m venv irwa_venv
 source irwa_venv/bin/activate
 pip install -r requirements.txt
 ```
+
+To run the web app (Part 4), create the `.env` file (`cp .env.example .env`, then add your Groq API key) and run `python web_app.py` from the repository root. Details in the [Part 4 README](project_progress/part_4/README.md).
 
 The rest of this README is the original template from the course.
 
@@ -44,7 +47,7 @@ The rest of this README is the original template from the course.
 ├── templates            # Contains HTML templates for the Flask application
 ├── static               # Contains static assets (images, CSS, JavaScript)
 ├── data                 # Contains the dataset file (fashion_products_dataset.json)
-├── project_progress     # Contains your solutions for Parts 1, 2, and 3 of the project
+├── project_progress     # Contains your solutions for Parts 1, 2, 3 and 4 of the project
 ├── .env                 # Environment variables for configuration (e.g., API keys)
 ├── .gitignore           # Specifies files and directories to be ignored by Git
 ├── LICENSE              # License information for the project
