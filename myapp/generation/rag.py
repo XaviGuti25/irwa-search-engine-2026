@@ -85,7 +85,7 @@ Answer in this format, in at most 120 words:
             return NO_PRODUCTS
         try:
             client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-            model_name = os.environ.get("GROQ_MODEL", "llama-3.1-8b-instant")
+            model_name = os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b")
             prompt = self.build_prompt(user_query, retrieved_results, mode, match_mode, top_N)
             extra = {"temperature": 0.2} if mode == "improved" else {}   # lower temperature = more stable answers
             chat_completion = client.chat.completions.create(

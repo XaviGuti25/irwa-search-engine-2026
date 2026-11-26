@@ -34,7 +34,7 @@ source irwa_venv/bin/activate
 pip install -r requirements.txt
 ```
 
-To run the web app (Part 4), create the `.env` file (`cp .env.example .env`, then add your Groq API key) and run `python web_app.py` from the repository root. Details in the [Part 4 README](project_progress/part_4/README.md).
+To run the web app (Part 4), get a free Groq API key at https://console.groq.com/keys, create the `.env` file (`cp .env.example .env`) and paste the key in `GROQ_API_KEY`, then run `python web_app.py` from the repository root. Details in the [Part 4 README](project_progress/part_4/README.md).
 
 The rest of this README is the original template from the course.
 

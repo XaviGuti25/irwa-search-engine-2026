@@ -27,18 +27,35 @@ Part 4 is the Flask web app in the root of the repository, not a notebook.
    source irwa_venv/bin/activate          # Windows: irwa_venv\Scripts\activate
    pip install -r requirements.txt
    ```
-2. Get a Groq API key (free). The AI summary needs it:
-   - Go to https://console.groq.com/keys and sign in (a Google account works).
-   - Click **Create API Key**, give it a name and copy the key. It starts with `gsk_` and is shown only once.
-3. Create the `.env` file from the example and paste the key in `GROQ_API_KEY`, between the quotes:
-   ```bash
-   cp .env.example .env                   # Windows: copy .env.example .env
-   ```
-   ```
-   GROQ_API_KEY = 'gsk_...'
-   GROQ_MODEL = "openai/gpt-oss-20b"
-   ```
-   Groq shut down `llama-3.1-8b-instant`, the template's model, in August 2026, so we use `openai/gpt-oss-20b`. Without a valid key the search engine works normally and the summary box shows "RAG is not available". `.env` is in `.gitignore`, so the key is never uploaded.
+2. Get a Groq API key. It is free and the AI summary (RAG) needs it:
+   1. Open https://console.groq.com/keys in the browser.
+   2. Sign in or create an account. A Google or GitHub account works.
+   3. Click **Create API Key**, write any name (for example `irwa`) and confirm.
+   4. Copy the key that appears. It starts with `gsk_` and Groq shows it only once, so paste it somewhere before closing the window. If you lose it, delete it and create a new one.
+3. Create the `.env` file and put your key in it:
+   1. From the repository root, copy the example file:
+      ```bash
+      cp .env.example .env                   # Windows: copy .env.example .env
+      ```
+   2. Open `.env` with any editor (VS Code, Notepad...). It looks like this:
+      ```
+      SECRET_KEY = "change-me"
+      DEBUG = True
+      SESSION_COOKIE_NAME = "IRWA_SEARCH_ENGINE"
+      DATA_FILE_PATH = "data/fashion_products_dataset.json"
+
+      GROQ_API_KEY = '<YOUR_GROQ_API_KEY>'
+      GROQ_MODEL = "openai/gpt-oss-20b"
+      ```
+   3. Replace `<YOUR_GROQ_API_KEY>`, including the `<` and `>` signs, with your key. Keep the quotes around it:
+      ```
+      Before:  GROQ_API_KEY = '<YOUR_GROQ_API_KEY>'
+      After:   GROQ_API_KEY = 'gsk_AbC123...your key...'
+      ```
+   4. Check that `GROQ_MODEL` is `"openai/gpt-oss-20b"`. Groq shut down `llama-3.1-8b-instant`, the model of the course template, in August 2026; with it you get the error `model_not_found`. Leave the other lines as they are.
+   5. Save the file. If the app was already running, stop it (Ctrl+C) and start it again, because `.env` is only read at start-up.
+
+   Without a valid key the search engine works normally and the summary box shows "RAG is not available". `.env` is in `.gitignore`, so your key is never uploaded to GitHub. Do not share it.
 4. Start the app from the repository root:
    ```bash
    python web_app.py
