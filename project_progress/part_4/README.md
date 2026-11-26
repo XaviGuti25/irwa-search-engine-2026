@@ -11,9 +11,11 @@ Part 4 is the Flask web app in the root of the repository, not a notebook.
 | `web_app.py` | Flask app: routes for search, results, document details, dwell time and dashboard |
 | `myapp/search/algorithms.py` | Pre-processing, inverted index, TF-IDF, BM25 and our score (moved here from the Part 3 notebook) |
 | `myapp/search/search_engine.py` | `SearchEngine.search()`, the function called by the web app |
+| `myapp/search/objects.py` | `ResultItem`, the fields shown for each result |
 | `myapp/generation/rag.py` | LLM summary of the results with Groq, baseline and improved versions |
 | `myapp/analytics/analytics_data.py` | Analytics data model (in memory) and the data for the dashboard |
 | `templates/` | HTML pages: `index`, `results`, `doc_details`, `dashboard` |
+| `static/styles/custom.css` | Styles of the pages |
 | `.env.example` | Example of the `.env` file the app needs |
 | `IRWA-2026-u233714-u232318-u232868-part-4.pdf` | Report |
 
@@ -25,12 +27,19 @@ Part 4 is the Flask web app in the root of the repository, not a notebook.
    source irwa_venv/bin/activate          # Windows: irwa_venv\Scripts\activate
    pip install -r requirements.txt
    ```
-2. Create the `.env` file from the example and write your Groq API key in `GROQ_API_KEY` (you can get a free one at https://console.groq.com/keys):
+2. Get a Groq API key (free). The AI summary needs it:
+   - Go to https://console.groq.com/keys and sign in (a Google account works).
+   - Click **Create API Key**, give it a name and copy the key. It starts with `gsk_` and is shown only once.
+3. Create the `.env` file from the example and paste the key in `GROQ_API_KEY`, between the quotes:
    ```bash
-   cp .env.example .env
+   cp .env.example .env                   # Windows: copy .env.example .env
    ```
-   Without a valid key the search engine works normally and the summary box shows "RAG is not available".
-3. Start the app from the repository root:
+   ```
+   GROQ_API_KEY = 'gsk_...'
+   GROQ_MODEL = "openai/gpt-oss-20b"
+   ```
+   Groq shut down `llama-3.1-8b-instant`, the template's model, in August 2026, so we use `openai/gpt-oss-20b`. Without a valid key the search engine works normally and the summary box shows "RAG is not available". `.env` is in `.gitignore`, so the key is never uploaded.
+4. Start the app from the repository root:
    ```bash
    python web_app.py
    ```
